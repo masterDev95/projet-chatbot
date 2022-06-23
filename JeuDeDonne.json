@@ -1,46 +1,39 @@
 {
     "intents": [
       {
-        "tag": "Bonjour Français",
+        "tag": "Hello ",
         "patterns": [
-          "bonjour",
-          "salut",
-          "wesh",
-          "salutation",
-          "Bonjour ça va",
-          "ça roule?",
-          "Bonjour, comment tu vas?"
+          "Hello",
+          "Hi",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         "responses": [
-          "Bonjour, Que puis-je faire pour vous?",
-          "Bonjour, ça va très bien. Que puis-je faire pour vous?"
+          "Hello, what can I do for you?",
+          "Hello, I'm doing very well. What can I do for you?"
         ]
       },
       {
-        "tag": "Bonjour Anglais",
+        "tag": "Question 1 ",
         "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
+          "Ma caméra ne fonctionne pas",
+          "Je n'arrive pas à activer ma caméra.",
+          "Je n'arrive pas à activer pendant le cours",
+          "Ma caméra ne marche pas?",
+          "Comment puis-je faire fonctionner ma caméra?",
 
-        ]
-      },
-      {
-        "tag": "Question 1 français",
-        "patterns": [
-          "Hello",
-          "Hi"
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 2 français",
+        "tag": "Question 2 ",
         "patterns": [
-          "Hello",
-          "Hi"
+          "Je n'arrive pas à entendre le cours "
         ],
         "responses": [
             
@@ -48,110 +41,97 @@
       },
 
       {
-        "tag": "Question 3 français",
+        "tag": "Question 3 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 4 français",
+        "tag": "Question 4 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 5 français",
+        "tag": "Question 5 ",
         "patterns": [
-          "Hello",
-          "Hi"
+          
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 6 français",
+        "tag": "Question 6 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 7 français",
+        "tag": "Question 7 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 8 français",
+        "tag": "Question 8 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 9 français",
+        "tag": "Question 9 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 10 français",
+        "tag": "Question 10 ",
         "patterns": [
-          "Hello",
-          "Hi"
+         
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 11 français",
+        "tag": "Question 11 ",
         "patterns": [
-          "Hello",
-          "Hi"
+          
         ],
         "responses": [
             
         ]
       },
       {
-        "tag": "aurevoir",
+        "tag": "good bye",
         "patterns": [
-          "au revoir",
-          "adieu",
-          "a plus tard",
-          "je dois y aller",
-          "bonne journée",
-          "bye",
-          "ciao",
-          "on se revoit plus tard",
-          "a un de ces quatres"
+          "good by",
+          "lll",
+          "ffff",
+          "ffff",
+          "vvvv"
         ],
         "responses": [
-          "Au revoir!",
+          "Good bye ",
           "Au plaisir de vous revoir!"
         ]
       }
