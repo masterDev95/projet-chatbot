@@ -1,0 +1,159 @@
+{
+    "intents": [
+      {
+        "tag": "Bonjour Français",
+        "patterns": [
+          "bonjour",
+          "salut",
+          "wesh",
+          "salutation",
+          "Bonjour ça va",
+          "ça roule?",
+          "Bonjour, comment tu vas?"
+        ],
+        "responses": [
+          "Bonjour, Que puis-je faire pour vous?",
+          "Bonjour, ça va très bien. Que puis-je faire pour vous?"
+        ]
+      },
+      {
+        "tag": "Bonjour Anglais",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+
+        ]
+      },
+      {
+        "tag": "Question 1 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 2 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+
+      {
+        "tag": "Question 3 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 4 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 5 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 6 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 7 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 8 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 9 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 10 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 11 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "aurevoir",
+        "patterns": [
+          "au revoir",
+          "adieu",
+          "a plus tard",
+          "je dois y aller",
+          "bonne journée",
+          "bye",
+          "ciao",
+          "on se revoit plus tard",
+          "a un de ces quatres"
+        ],
+        "responses": [
+          "Au revoir!",
+          "Au plaisir de vous revoir!"
+        ]
+      }
+    ]
+  }
