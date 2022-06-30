@@ -20,3 +20,11 @@ last_question_tag = '' # Sera la dernière question posé par le bot
 pb_resolu_count = 0
 wait = False
 end = False
+
+def clean_up_sentence(sentence):    
+    sentence_words = nltk.word_tokenize(sentence) # diviser les mots dans un tableau 
+    sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words] # créer une forme courte pour chaque mot
+    return sentence_words   # retourner le tableau des sacs de mots : 0 ou 1 pour chaque mot du sac qui existe dans la phrase
+
+
+
