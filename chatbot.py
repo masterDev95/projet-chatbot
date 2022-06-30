@@ -54,3 +54,42 @@ def get_response(intents_list, intents_json):
     global end
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']    
+
+    # Parcours de la liste d'intention
+    for i in list_of_intents:
+        # On a trouvé l'intention
+        if i['tag'] == tag:
+            # Si la dernière réponse met fin à la conversation
+            if 'end' in i.keys():
+                end = True
+            # Si on attend une suite de question
+            if 'follow' in i.keys():
+                last_question_tag = tag
+            # Si l'intention est une affirmation ou une negation
+            if 'ouiNon' in i.keys():
+                # Si l'on vient d'une question du bot
+                # pour savoir si le pb est resolu
+                if wait:
+                    if tag == 'reponseUtilisateurAffirmative':
+                        if 'end' in i['wait'].keys():
+                            end = True
+                        return random.choice(i['wait']['responses'])
+                    wait_string = 'wait'+str(pb_resolu_count)
+                    wait = False
+                    if 'end' in i[wait_string].keys():
+                        end = True
+                    if 'wait' in i[wait_string].keys():
+                        return resolution_pb_waiti[wait_string]['wait'], (i[wait_string]['pb'])
+                    return random.choice(i[wait_string]['responses'])
+                if 'end' in i[last_question_tag].keys():
+                    end = True
+                if 'wait' in i[last_question_tag].keys():
+                    if 'emptyPb' in i[last_question_tag]:
+                        return resolution_pb_wait(i[last_question_tag]['wait'])
+                    return resolution_pb_wait(i[last_question_tag]['wait'], i[last_question_tag]['pb'])
+                return random.choice(i[last_question_tag]['responses'])
+            # Si on propose une soluce
+            # (on att 5s et on lui demande si c'est resolu)
+            if 'wait' in i.keys():
+                return resolution_pb_wait(i['wait'], i['pb'])
+            return random.choice(i['responses'])
