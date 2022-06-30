@@ -73,23 +73,29 @@ def get_response(intents_list, intents_json):
                     if tag == 'reponseUtilisateurAffirmative':
                         if 'end' in i['wait'].keys():
                             end = True
+                        #Selectionne aléatoirement un élément parmit la liste
                         return random.choice(i['wait']['responses'])
+                    # Selon le niveau de conversation un objet "wait" différent sera sélectionner
                     wait_string = 'wait'+str(pb_resolu_count)
                     wait = False
+                    # Si la conversation est cloturé car pas de réponse (appel d'un assistant)
                     if 'end' in i[wait_string].keys():
                         end = True
+                    # Si on est dans un cas ou on doit attendre le bot lancera un message avec une attente de 5 secs
                     if 'wait' in i[wait_string].keys():
-                        return resolution_pb_waiti[wait_string]['wait'], (i[wait_string]['pb'])
+                        return resolution_pb_wait[wait_string]['wait'], (i[wait_string]['pb'])
+                    # Dans le cas ou il n'y a pas d'attente ou de cloture de conversation le bot répond aléatoire en rapport avec la derniere demande de l'utilisateur
                     return random.choice(i[wait_string]['responses'])
                 if 'end' in i[last_question_tag].keys():
                     end = True
+                # Attendre 5 secondes et demander si le pbm est résolu
                 if 'wait' in i[last_question_tag].keys():
                     if 'emptyPb' in i[last_question_tag]:
                         return resolution_pb_wait(i[last_question_tag]['wait'])
                     return resolution_pb_wait(i[last_question_tag]['wait'], i[last_question_tag]['pb'])
+                # Dans le cas ou i n'y a pas de wait renvoyer une réponse aléatoire en rapport avec la derniere demande
                 return random.choice(i[last_question_tag]['responses'])
-            # Si on propose une soluce
-            # (on att 5s et on lui demande si c'est resolu)
+            # Le bot attend 5 secondes puis renvoie un message
             if 'wait' in i.keys():
                 return resolution_pb_wait(i['wait'], i['pb'])
             return random.choice(i['responses'])
