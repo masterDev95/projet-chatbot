@@ -1,0 +1,29 @@
+{
+    "pbs": [
+      {
+        "name": "activationCamera",
+        "response": "Pensez à activer le bouton de la caméra si vous en avez un sur votre clavier. Puis pensez à enlever le cache devant votre caméra."
+      },
+      {
+        "name": "verificationCamera",
+        "response": "Veuillez vérifier votre caméra"
+      },
+      {
+        "name": "VerificationPC",
+        "response": "Votre Pc est-il sur windows 10, Windows 11 ou Mac?"
+      },
+      {
+        "name": "utilitaireResoPbCameraWindows11",
+        "response": "Alors allez dans : Paramètre > Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Caméra"
+      },
+      {
+        "name": "utilitaireResoPbCameraWindows10",
+        "response": "Alors allez dans : Paramètre> Confidentialité> Caméra"
+      },
+      {
+        "name": "utilitaireResoPbCameraMac",
+        "response": "Alors allez dans:"
+      }
+
+    ]
+}
