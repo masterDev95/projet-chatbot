@@ -26,5 +26,11 @@ def clean_up_sentence(sentence):
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words] # créer une forme courte pour chaque mot
     return sentence_words   # retourner le tableau des sacs de mots : 0 ou 1 pour chaque mot du sac qui existe dans la phrase
 
-
-
+def bag_of_words(sentence):
+    sentence_words = clean_up_sentence(sentence) # identifier les mots
+    bag = [0] * len(words)
+    for w in sentence_words:
+        for i, word in enumerate(words):
+            if word == w:
+                bag[i] = i # attribuer 1 si le mot courant est dans la position de vocabulaire
+    return numpy.array(bag) # retourner le tableau des sacs de mots : 0 ou 1 pour chaque mot du sac qui existe dans la phrase
