@@ -5,135 +5,144 @@
         "patterns": [
           "Hello",
           "Hi",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Hey",
+          "Good morning",
+          "Good afternoon",
+          "Yo",
+          "Greetings"
         ],
         "responses": [
-          "Hello, what can I do for you?",
-          "Hello, I'm doing very well. What can I do for you?"
+          "Hello,you have already asked me, but how can I help you?"
         ]
       },
       {
-        "tag": "Question 1 ",
+        "tag": "QuestionCamera",
         "patterns": [
-          "Ma caméra ne fonctionne pas",
-          "Je n'arrive pas à activer ma caméra.",
-          "Je n'arrive pas à activer pendant le cours",
-          "Ma caméra ne marche pas?",
-          "Comment puis-je faire fonctionner ma caméra?",
+          "My camera does not work",
+          "I can't activate my camera.",
+          "I can't activate my camera during the course",
+          "I can't activate my camera during the course",
+          "My camera doesn't work.",
+          "How do I get my camera to work"
+        ],
+        "responses": [
+          "Have you activated your camera first?"
+        ],
+        "follow": true
+      },
+      {
+        "tag": "QuestionCameraSuite",
+        "patterns": [
+          "Where is the activation of the camera?",
+          "Or find in Windows the activation of the camera?"
+        ],
+        "pb": "activationCamera",
+        "wait": true
+      },
 
-        ],
-        "responses": [
-            
-        ]
-      },
       {
-        "tag": "Question 2 ",
+        "tag": "reponseUtilisateurAffirmative",
         "patterns": [
-          "Je n'arrive pas à entendre le cours "
+          "Yes",
+          "Yes I did",
+          "I have already done so",
+          "Yes it's good",
+          "Yes, the problem is solved"
         ],
-        "responses": [
-            
-        ]
+        "": {
+          "responses": [
+            "Hello, what can I do for you? ? "
+          ]
+        },
+        "wait": {
+          "responses": [
+            "Good day and see you soon"
+          ],
+          "end": true
+        },
+        "QuestionCamera": {
+          "pb": "VerificationPC",
+          "wait": 2
+        },
+        "ouiNon": true
       },
 
       {
-        "tag": "Question 3 ",
+        "tag": "QuestionPC11",
         "patterns": [
-         
+          "My PC is on Windows 11",
+          "On Windows 11",
+          "Windows 11"
         ],
-        "responses": [
-            
-        ]
+        "pb": "utilitaireResoPbCameraWindows11",
+        "wait": true
       },
       {
-        "tag": "Question 4 ",
-        "patterns": [
-         
+       "tag": "QuestionPC10",
+       "patterns": [
+         "My PC is on Windows 10",
+         "On Windows 10",
+         "Windows 10"
         ],
-        "responses": [
-            
-        ]
+        "pb": "utilitaireResoPbCameraWindows10",
+        "wait": true
       },
       {
-        "tag": "Question 5 ",
+        "tag": "QuestionMac",
         "patterns": [
-          
+          "My PC is on Mac",
+          "On mac",
+          "Mac"
+         ],
+         "pb": "utilitaireResoPbCameraMac",
+         "wait": true
+       },
+
+      {
+        "tag": "reponseUtilisateurNegative",
+        "patterns": [
+          "NO",
+          "No, I'm going to look",
+          "No, the problem is not solved",
+          "No, still not"
         ],
-        "responses": [
-            
-        ]
+        "QuestionCamera": {
+         "emptyPb": true,
+        "wait": 1
+       },
+        
+        "wait1": {
+          "pb": "VerificationPC",
+          "wait": 2
+        },
+        "wait2": {
+          "responses": [
+            "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
+          ],
+          "end": true
+        },
+        "ouiNon": true
       },
       {
-        "tag": "Question 6 ",
+        "tag": "reponseUtilisateurIncertaine",
         "patterns": [
-         
+          "I don't think so",
+          "probably not"
         ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 7 ",
-        "patterns": [
-         
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 8 ",
-        "patterns": [
-         
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 9 ",
-        "patterns": [
-         
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 10 ",
-        "patterns": [
-         
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 11 ",
-        "patterns": [
-          
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "good bye",
-        "patterns": [
-          "good by",
-          "lll",
-          "ffff",
-          "ffff",
-          "vvvv"
-        ],
-        "responses": [
-          "Good bye ",
-          "Au plaisir de vous revoir!"
-        ]
+        "QuestionCamera": {
+          "pb": "verificationCamera",
+          "wait": 1
+        },
+        "ouiNon": true
       }
     ]
-  }
+}
+
+
+
+
+
+
+
+
+
