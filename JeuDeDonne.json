@@ -1,159 +1,148 @@
 {
     "intents": [
       {
-        "tag": "Bonjour Français",
+        "tag": "Hello ",
         "patterns": [
-          "bonjour",
-          "salut",
-          "wesh",
-          "salutation",
-          "Bonjour ça va",
-          "ça roule?",
-          "Bonjour, comment tu vas?"
+          "Hello",
+          "Hi",
+          "Hey",
+          "Good morning",
+          "Good afternoon",
+          "Yo",
+          "Greetings"
         ],
         "responses": [
-          "Bonjour, Que puis-je faire pour vous?",
-          "Bonjour, ça va très bien. Que puis-je faire pour vous?"
+          "Hello,you have already asked me, but how can I help you?"
         ]
       },
       {
-        "tag": "Bonjour Anglais",
+        "tag": "QuestionCamera",
         "patterns": [
-          "Hello",
-          "Hi"
+          "My camera does not work",
+          "I can't activate my camera.",
+          "I can't activate my camera during the course",
+          "I can't activate my camera during the course",
+          "My camera doesn't work.",
+          "How do I get my camera to work"
         ],
         "responses": [
-
-        ]
+          "Have you activated your camera first?"
+        ],
+        "follow": true
       },
       {
-        "tag": "Question 1 français",
+        "tag": "QuestionCameraSuite",
         "patterns": [
-          "Hello",
-          "Hi"
+          "Where is the activation of the camera?",
+          "Or find in Windows the activation of the camera?"
         ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 2 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
+        "pb": "activationCamera",
+        "wait": true
       },
 
       {
-        "tag": "Question 3 français",
+        "tag": "reponseUtilisateurAffirmative",
         "patterns": [
-          "Hello",
-          "Hi"
+          "Yes",
+          "Yes I did",
+          "I have already done so",
+          "Yes it's good",
+          "Yes, the problem is solved"
         ],
-        "responses": [
-            
-        ]
+        "": {
+          "responses": [
+            "Hello, what can I do for you? ? "
+          ]
+        },
+        "wait": {
+          "responses": [
+            "Good day and see you soon"
+          ],
+          "end": true
+        },
+        "QuestionCamera": {
+          "pb": "VerificationPC",
+          "wait": 2
+        },
+        "ouiNon": true
+      },
+
+      {
+        "tag": "QuestionPC11",
+        "patterns": [
+          "My PC is on Windows 11",
+          "On Windows 11",
+          "Windows 11"
+        ],
+        "pb": "utilitaireResoPbCameraWindows11",
+        "wait": true
       },
       {
-        "tag": "Question 4 français",
-        "patterns": [
-          "Hello",
-          "Hi"
+       "tag": "QuestionPC10",
+       "patterns": [
+         "My PC is on Windows 10",
+         "On Windows 10",
+         "Windows 10"
         ],
-        "responses": [
-            
-        ]
+        "pb": "utilitaireResoPbCameraWindows10",
+        "wait": true
       },
       {
-        "tag": "Question 5 français",
+        "tag": "QuestionMac",
         "patterns": [
-          "Hello",
-          "Hi"
+          "My PC is on Mac",
+          "On mac",
+          "Mac"
+         ],
+         "pb": "utilitaireResoPbCameraMac",
+         "wait": true
+       },
+
+      {
+        "tag": "reponseUtilisateurNegative",
+        "patterns": [
+          "NO",
+          "No, I'm going to look",
+          "No, the problem is not solved",
+          "No, still not"
         ],
-        "responses": [
-            
-        ]
+        "QuestionCamera": {
+         "emptyPb": true,
+        "wait": 1
+       },
+        
+        "wait1": {
+          "pb": "VerificationPC",
+          "wait": 2
+        },
+        "wait2": {
+          "responses": [
+            "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
+          ],
+          "end": true
+        },
+        "ouiNon": true
       },
       {
-        "tag": "Question 6 français",
+        "tag": "reponseUtilisateurIncertaine",
         "patterns": [
-          "Hello",
-          "Hi"
+          "I don't think so",
+          "probably not"
         ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 7 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 8 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 9 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 10 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 11 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "aurevoir",
-        "patterns": [
-          "au revoir",
-          "adieu",
-          "a plus tard",
-          "je dois y aller",
-          "bonne journée",
-          "bye",
-          "ciao",
-          "on se revoit plus tard",
-          "a un de ces quatres"
-        ],
-        "responses": [
-          "Au revoir!",
-          "Au plaisir de vous revoir!"
-        ]
+        "QuestionCamera": {
+          "pb": "verificationCamera",
+          "wait": 1
+        },
+        "ouiNon": true
       }
     ]
-  }
+}
+
+
+
+
+
+
+
+
+
