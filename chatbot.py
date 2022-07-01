@@ -121,3 +121,12 @@ def resolution_pb_wait(wait_inc, pb_name=None):
     return 'Avez-vous résolu votre problème?'
 
 print('Bonjour!')
+
+# Mettre tout le texte entrée par l'utilisateur en minuscule
+# Variable entrée utilisateur et la réponse du bot
+while True:
+    message = input('> ').lower()
+    ints = predict_class(message)
+    res = get_response(ints, intents)
+    print(res)
+    if end: quit()
