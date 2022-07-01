@@ -99,3 +99,25 @@ def get_response(intents_list, intents_json):
             if 'wait' in i.keys():
                 return resolution_pb_wait(i['wait'], i['pb'])
             return random.choice(i['responses'])
+
+# Fonction résolution qui a pour parametre un problème précis (attente en cas de relance)
+def resolution_pb_wait(wait_inc, pb_name=None):
+    global wait
+    global pb_resolu_count
+    global pbs
+    
+    # Si le problème a pas de nom attendre sinon mettre la solution du problème
+    if pb_name != None:
+        for p in pbs['pbs']:
+            if p['name'] == pb_name:
+                print(p['response'])
+
+    # Variable pour la solution souhaitée
+    pb_resolu_count += wait_inc
+    #Attendre de 5 secondes
+    time.sleep(5)
+    # Variable requise pour l'attente des 5 secondes et sa réponse
+    wait = True
+    return 'Avez-vous résolu votre problème?'
+
+print('Bonjour!')
