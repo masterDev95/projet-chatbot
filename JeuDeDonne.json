@@ -61,6 +61,13 @@
       "QuestionCamera": {
         "responses": [
           "Is your Pc on windows 10, Windows 11 ou Mac?"
+        ],
+        "ouiNon": true
+      }, 
+
+      "QuestionSon": {
+        "responses": [
+          "Is your Pc on windows 10, Windows 11 ou Mac?"
         ]
       },
       "ouiNon": true
@@ -109,6 +116,10 @@
         "emptyPb": true,
         "wait": 1
       },
+      "QuestionSon": {
+        "emptyPb": true,
+        "wait": 1
+      },
       "": {
         "responses": [
           "Good day and see you soon"
@@ -135,9 +146,70 @@
       ],
       "QuestionCamera": {
         "pb": "verificationCamera",
+        "wait": 1,
+        "ouiNon": true
+      },
+      "QuestionSon": {
+        "pb": "verificationSon",
         "wait": 1
       },
       "ouiNon": true
+    },
+    {
+      "tag": "QuestionSon",
+      "patterns": [
+        "Je n'arrive pas à entendre le cours",
+        "Je n'entend pas le professeur",
+        "Je n'entend pas l'intervenant",
+        "Je n'arrive pas à suive le cours car je n'entend pas l'intervenant"
+      ],
+      "responses": [
+        "Avez-vous activé votre son ?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionSonSuite",
+      "patterns": [
+        "Ou est-ce que je peux activé mon son?",
+        "Ou activé le son",
+        "Ou trouver la barre de son",
+        "Comment augmenter le volume du son",
+        "Or find in Windows the activation of the camera?"
+      ],
+      "pb": "activationSon",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionSonPC11",
+      "patterns": [
+        "My PC is on Windows 11",
+        "On Windows 11",
+        "Windows 11"
+      ],
+      "pb": "utilitaireResoPbSonWindows11",
+      "wait": 1
+    },
+    {
+     "tag": "QuestionSonPC10",
+     "patterns": [
+        "My PC is on Windows 10",
+        "On Windows 10",
+        "Windows 10"
+      ],
+      "pb": "utilitaireResoPbSonWindows10",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionSonMac",
+      "patterns": [
+        "My PC is on Mac",
+        "On mac",
+        "Mac"
+       ],
+       "pb": "utilitaireResoPbSonMac",
+       "wait": 1
     }
   ]
+  
 }

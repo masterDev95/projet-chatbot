@@ -19,6 +19,26 @@
       {
         "name": "utilitaireResoPbCameraMac",
         "response": "Alors allez dans:"
+      },
+      {
+        "name": "activationSon",
+        "reponse":"Vous trouverez en bas à droite dans la barre des tâches"
+      },
+      {
+        "name": "verificationSon",
+        "response": "Veuillez vérifier votre Son"
+      },
+      {
+        "name": "utilitaireResoPbSonWindows11",
+        "response": "Alors allez dans: test renvoie bien son windows 11"
+      },
+      {
+        "name": "utilitaireResoPbSonWindows10",
+        "response": "Alors allez dans :test renvoie bien son windows 10 "
+      },
+      {
+        "name": "utilitaireResoPbSonMac",
+        "response": "Alors allez dans: test renvoie bien son mac"
       }
 
     ]
