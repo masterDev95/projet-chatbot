@@ -9,10 +9,6 @@
         "response": "Veuillez vérifier votre caméra"
       },
       {
-        "name": "VerificationPC",
-        "response": "Votre Pc est-il sur windows 10, Windows 11 ou Mac?"
-      },
-      {
         "name": "utilitaireResoPbCameraWindows11",
         "response": "Alors allez dans : Paramètre > Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Caméra"
       },

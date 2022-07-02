@@ -1,148 +1,143 @@
 {
-    "intents": [
-      {
-        "tag": "Hello ",
-        "patterns": [
-          "Hello",
-          "Hi",
-          "Hey",
-          "Good morning",
-          "Good afternoon",
-          "Yo",
-          "Greetings"
-        ],
+  "intents": [
+    {
+      "tag": "Hello",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Greetings"
+      ],
+      "responses": [
+        "Hello,you have already asked me, but how can I help you?"
+      ]
+    },
+    {
+      "tag": "QuestionCamera",
+      "patterns": [
+        "My camera does not work",
+        "I can't activate my camera.",
+        "I can't activate my camera during the course",
+        "I can't activate my camera during the course",
+        "My camera doesn't work.",
+        "How do I get my camera to work"
+      ],
+      "responses": [
+        "Have you activated your camera first?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionCameraSuite",
+      "patterns": [
+        "Where is the activation of the camera?",
+        "Or find in Windows the activation of the camera?"
+      ],
+      "pb": "activationCamera",
+      "wait": 1
+    },
+    {
+      "tag": "reponseUtilisateurAffirmative",
+      "patterns": [
+        "Yes",
+        "Yes I did",
+        "I have already done so",
+        "Yes it's good",
+        "Yes, the problem is solved"
+      ],
+      "": {
         "responses": [
-          "Hello,you have already asked me, but how can I help you?"
+          "Hello, what can I do for you?"
         ]
       },
-      {
-        "tag": "QuestionCamera",
-        "patterns": [
-          "My camera does not work",
-          "I can't activate my camera.",
-          "I can't activate my camera during the course",
-          "I can't activate my camera during the course",
-          "My camera doesn't work.",
-          "How do I get my camera to work"
-        ],
+      "wait": {
         "responses": [
-          "Have you activated your camera first?"
+          "Good day and see you soon"
         ],
-        "follow": true
+        "end": true
       },
-      {
-        "tag": "QuestionCameraSuite",
-        "patterns": [
-          "Where is the activation of the camera?",
-          "Or find in Windows the activation of the camera?"
-        ],
-        "pb": "activationCamera",
-        "wait": true
+      "QuestionCamera": {
+        "responses": [
+          "Is your Pc on windows 10, Windows 11 ou Mac?"
+        ]
       },
-
-      {
-        "tag": "reponseUtilisateurAffirmative",
-        "patterns": [
-          "Yes",
-          "Yes I did",
-          "I have already done so",
-          "Yes it's good",
-          "Yes, the problem is solved"
-        ],
-        "": {
-          "responses": [
-            "Hello, what can I do for you? ? "
-          ]
-        },
-        "wait": {
-          "responses": [
-            "Good day and see you soon"
-          ],
-          "end": true
-        },
-        "QuestionCamera": {
-          "pb": "VerificationPC",
-          "wait": 2
-        },
-        "ouiNon": true
-      },
-
-      {
-        "tag": "QuestionPC11",
-        "patterns": [
-          "My PC is on Windows 11",
-          "On Windows 11",
-          "Windows 11"
-        ],
-        "pb": "utilitaireResoPbCameraWindows11",
-        "wait": true
-      },
-      {
-       "tag": "QuestionPC10",
-       "patterns": [
-         "My PC is on Windows 10",
-         "On Windows 10",
-         "Windows 10"
-        ],
-        "pb": "utilitaireResoPbCameraWindows10",
-        "wait": true
-      },
-      {
-        "tag": "QuestionMac",
-        "patterns": [
-          "My PC is on Mac",
-          "On mac",
-          "Mac"
-         ],
-         "pb": "utilitaireResoPbCameraMac",
-         "wait": true
-       },
-
-      {
-        "tag": "reponseUtilisateurNegative",
-        "patterns": [
-          "NO",
-          "No, I'm going to look",
-          "No, the problem is not solved",
-          "No, still not"
-        ],
-        "QuestionCamera": {
-         "emptyPb": true,
+      "ouiNon": true
+    },
+    {
+      "tag": "QuestionPC11",
+      "patterns": [
+        "My PC is on Windows 11",
+        "On Windows 11",
+        "Windows 11"
+      ],
+      "pb": "utilitaireResoPbCameraWindows11",
+      "wait": 1
+    },
+    {
+     "tag": "QuestionPC10",
+     "patterns": [
+        "My PC is on Windows 10",
+        "On Windows 10",
+        "Windows 10"
+      ],
+      "pb": "utilitaireResoPbCameraWindows10",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionMac",
+      "patterns": [
+        "My PC is on Mac",
+        "On mac",
+        "Mac"
+       ],
+       "pb": "utilitaireResoPbCameraMac",
+       "wait": 1
+    },
+    {
+      "tag": "reponseUtilisateurNegative",
+      "patterns": [
+        "No I'm going to look",
+        "No the problem is not solved",
+        "No still not",
+        "not really",
+        "nope",
+        "No"
+      ],
+      "QuestionCamera": {
+        "emptyPb": true,
         "wait": 1
-       },
-        
-        "wait1": {
-          "pb": "VerificationPC",
-          "wait": 2
-        },
-        "wait2": {
-          "responses": [
-            "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
-          ],
-          "end": true
-        },
-        "ouiNon": true
       },
-      {
-        "tag": "reponseUtilisateurIncertaine",
-        "patterns": [
-          "I don't think so",
-          "probably not"
+      "": {
+        "responses": [
+          "Good day and see you soon"
+        ]
+      },
+      "wait1": {
+        "responses": [
+          "Is your Pc on windows 10, Windows 11 ou Mac?"
+        ]
+      },
+      "wait2": {
+        "responses": [
+          "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
         ],
-        "QuestionCamera": {
-          "pb": "verificationCamera",
-          "wait": 1
-        },
-        "ouiNon": true
-      }
-    ]
+        "end": true
+      },
+      "ouiNon": true
+    },
+    {
+      "tag": "reponseUtilisateurIncertaine",
+      "patterns": [
+        "I don't think so",
+        "probably not"
+      ],
+      "QuestionCamera": {
+        "pb": "verificationCamera",
+        "wait": 1
+      },
+      "ouiNon": true
+    }
+  ]
 }
-
-
-
-
-
-
-
-
-
