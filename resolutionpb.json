@@ -39,7 +39,27 @@
       {
         "name": "utilitaireResoPbSonMac",
         "response": "Alors allez dans: test renvoie bien son mac"
-      }
+      },
+      {
+        "name": "activationBulleDiscussion",
+        "reponse":"Test Pour trouver la detection du clavier"
+      },
+      {
+        "name": "verificationBulleDiscussion",
+        "response": "Veuillez vérifier que votre clavier soit bien connecté à votre ordinateur, en filiaire ou en bluetoooth"
+      },
+      {
+        "name": "utilitaireResoPbBulleDWindows11",
+        "response": "Alors allez dans: test renvoie bien son windows 11 BD"
+      },
+      {
+        "name": "utilitaireResoPbBulleDWindows10",
+        "response": "Alors allez dans :test renvoie bien son windows 10 BD "
+      },
+      {
+        "name": "utilitaireResoPbBulleDMac",
+        "response": "Alors allez dans: test renvoie bien son mac BD"
+      },
 
     ]
 }

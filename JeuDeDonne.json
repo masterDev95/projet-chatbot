@@ -68,9 +68,16 @@
       "QuestionSon": {
         "responses": [
           "Is your Pc on windows 10, Windows 11 ou Mac?"
-        ]
+        ],
+        "ouiNon": true
       },
-      "ouiNon": true
+
+      "QuestionBulleDiscussion": {
+        "responses": [
+          "Is your Pc on windows 10, Windows 11 ou Mac?"
+        ],
+        "ouiNon": true
+      }
     },
     {
       "tag": "QuestionPC11",
@@ -151,9 +158,14 @@
       },
       "QuestionSon": {
         "pb": "verificationSon",
-        "wait": 1
+        "wait": 1,
+        "ouiNon": true
       },
-      "ouiNon": true
+      "QuestionBulleDiscussion": {
+        "pb": "verificationBulleDiscussion",
+        "wait": 1,
+        "ouiNon": true
+      }
     },
     {
       "tag": "QuestionSon",
@@ -209,7 +221,59 @@
        ],
        "pb": "utilitaireResoPbSonMac",
        "wait": 1
-    }
+    },
+    {
+      "tag": "QuestionBulleDiscussion",
+      "patterns": [
+        "Je n'arrive pas à écrire dans la bulle de discussion",
+        "Quand je tape sur une touche cela n'écrit pas dans la bulle de discussion",
+        "L'intervenant peu écrire dans la bulle de discution mais moi non"
+      ],
+      "responses": [
+        "Avez-vous vérifié que votre clavier soit bien relié à votre ordinateur ?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionBulleDisuctionSuite",
+      "patterns": [
+        "Comment je peux voir que mon clavier soit bien relier?",
+        "Ou puis-je vérifier que mon périphérique soit bien detecter",
+        "Ou puis-je vérifier que mon clavier soit bien detecter"
+      ],
+      "pb": "activationBulleDiscution",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionBulleDiscussionPC11",
+      "patterns": [
+        "My PC is on Windows 11",
+        "On Windows 11",
+        "Windows 11"
+      ],
+      "pb": "utilitaireResoPbBulleDWindows11",
+      "wait": 1
+    },
+    {
+     "tag": "QuestionBulleDiscussionPC10",
+     "patterns": [
+        "My PC is on Windows 10",
+        "On Windows 10",
+        "Windows 10"
+      ],
+      "pb": "utilitaireResoPbBulleDWindows10",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionBulleDsiscussionMac",
+      "patterns": [
+        "My PC is on Mac",
+        "On mac",
+        "Mac"
+       ],
+       "pb": "utilitaireResoPbBulleDMac",
+       "wait": 1
+    },
   ]
   
 }
