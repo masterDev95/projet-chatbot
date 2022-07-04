@@ -10,7 +10,7 @@ from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('jeuDeDonne.json').read())
 pbs = json.loads(open('resolutionpb.json').read())
 
 words = pickle.load(open('words.pk1', 'rb'))
@@ -74,7 +74,7 @@ def get_response(intents_list, intents_json):
                         if 'end' in i['wait'].keys():
                             end = True
                         #Selectionne aléatoirement un élément parmit la liste
-                        return random.choice(i['wait']['responses'])
+                        return [random.choice(i['wait']['responses'])]
                     # Selon le niveau de conversation un objet "wait" différent sera sélectionner
                     wait_string = 'wait'+str(pb_resolu_count)
                     wait = False
@@ -98,7 +98,7 @@ def get_response(intents_list, intents_json):
             # Le bot attend 5 secondes puis renvoie un message
             if 'wait' in i.keys():
                 return resolution_pb_wait(i['wait'], i['pb'])
-            return random.choice(i['responses'])
+            return [random.choice(i['responses'])]
 
 # Fonction résolution qui a pour parametre un problème précis (attente en cas de relance)
 def resolution_pb_wait(wait_inc, pb_name=None):
@@ -106,27 +106,32 @@ def resolution_pb_wait(wait_inc, pb_name=None):
     global pb_resolu_count
     global pbs
     
+    response = []
+    
     # Si le problème a pas de nom attendre sinon mettre la solution du problème
     if pb_name != None:
         for p in pbs['pbs']:
             if p['name'] == pb_name:
-                print(p['response'])
+                response.append(p['response'])
 
     # Variable pour la solution souhaitée
     pb_resolu_count += wait_inc
-    #Attendre de 5 secondes
-    time.sleep(5)
     # Variable requise pour l'attente des 5 secondes et sa réponse
     wait = True
-    return 'Avez-vous résolu votre problème?'
-
-print('Bonjour!')
+    response.append('Avez-vous résolu votre problème?')
+    return response
 
 # Mettre tout le texte entrée par l'utilisateur en minuscule
 # Variable entrée utilisateur et la réponse du bot
-while True:
-    message = input('> ').lower()
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
-    if end: quit()
+def main():
+    print('Bonjour!')
+    while True:
+        message = input('> ').lower()
+        ints = predict_class(message)
+        res = get_response(ints, intents)
+        i = 0
+        for r in res:
+            if i > 0: time.sleep(5)
+            print(r)
+            i += 1
+        if end: quit()
