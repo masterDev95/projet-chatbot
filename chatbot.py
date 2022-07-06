@@ -118,8 +118,10 @@ def resolution_pb_wait(wait_inc, pb_name=None):
     time.sleep(5)
     # Variable requise pour l'attente des 5 secondes et sa réponse
     wait = True
+    # Message apres les 5 secondes
     return 'Avez-vous résolu votre problème?'
 
+#Message de départ
 print('Bonjour!')
 
 # Mettre tout le texte entrée par l'utilisateur en minuscule
