@@ -85,7 +85,7 @@ def get_response(intents_list, intents_json):
                     if 'wait' in i[wait_string].keys():
                         return resolution_pb_wait(i[wait_string]['wait'], i[wait_string]['pb'])
                     # Dans le cas ou il n'y a pas d'attente ou de cloture de conversation le bot répond aléatoire en rapport avec la derniere demande de l'utilisateur
-                    return random.choice(i[wait_string]['responses'])
+                    return [random.choice(i[wait_string]['responses'])]
                 if 'end' in i[last_question_tag].keys():
                     end = True
                 # Attendre 5 secondes et demander si le pbm est résolu
@@ -94,7 +94,7 @@ def get_response(intents_list, intents_json):
                         return resolution_pb_wait(i[last_question_tag]['wait'])
                     return resolution_pb_wait(i[last_question_tag]['wait'], i[last_question_tag]['pb'])
                 # Dans le cas ou i n'y a pas de wait renvoyer une réponse aléatoire en rapport avec la derniere demande
-                return random.choice(i[last_question_tag]['responses'])
+                return [random.choice(i[last_question_tag]['responses'])]
             # Le bot attend 5 secondes puis renvoie un message
             if 'wait' in i.keys():
                 return resolution_pb_wait(i['wait'], i['pb'])
@@ -127,11 +127,21 @@ def main():
     print('Bonjour!')
     while True:
         message = input('> ').lower()
-        ints = predict_class(message)
-        res = get_response(ints, intents)
+        
+        if message == 'no' or message == 'yes':
+            if message == 'no':
+                res = get_response([{'intent': 'reponseUtilisateurNegative'}], intents)
+            if message == 'yes':
+                res = get_response([{'intent': 'reponseUtilisateurAffirmative'}], intents)
+        else:
+            ints = predict_class(message)
+            res = get_response(ints, intents)
+            
         i = 0
         for r in res:
             if i > 0: time.sleep(5)
             print(r)
             i += 1
         if end: quit()
+
+main()
