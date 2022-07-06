@@ -128,6 +128,7 @@ def main():
     while True:
         message = input('> ').lower()
         
+        # Traitement exceptionel du 'oui' et 'non' non gérés par le training
         if message == 'no' or message == 'yes':
             if message == 'no':
                 res = get_response([{'intent': 'reponseUtilisateurNegative'}], intents)
