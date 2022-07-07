@@ -46,6 +46,26 @@
             
         ]
       },
+      {
+        "tag": "QuestionFichierBulleDiscussion",
+        "patterns": [
+          "Je n'arrive pas à envoyer de fichier dans la bulle de discussion",
+          "Je ne peux pas insérer de fichier dans la discussion"
+        ],
+        "responses": [
+          "Avez-vous vérifié que le fichier ne soit pas trop volumineux?"
+        ],
+        "follow": true
+      },
+      {
+        "tag": "QuestionFichierBulleDiscussionSuite",
+        "patterns": [
+          "Comment vérifier la taille de mon fichier ?",
+          "Comment je connais la taille de mon fichier ?"
+        ],
+        "pb": "activationFichierBulleDiscussion",
+        "wait": 1
+      },
 
       {
         "tag": "Question 3 français",
@@ -53,6 +73,7 @@
           "Hello",
           "Hi"
         ],
+<<<<<<< Updated upstream
         "responses": [
             
         ]
@@ -67,6 +88,34 @@
             
         ]
       },
+=======
+        "": {
+          "responses": [
+            "Hello, what can I do for you? ? "
+          ]
+        },
+        "wait": {
+          "responses": [
+            "Good day and see you soon"
+          ],
+          "end": true
+        },
+        "QuestionCamera": {
+          "pb": "VerificationPC",
+          "wait": 2,
+          "ouiNon": true
+        },
+        "QuestionFichierBulle": {
+          "responses": [
+            "Avez-vous vérifié que le fichier soit bien un fichier pdf ?",
+      ""
+          ],
+          "ouiNon": true
+        }
+      },
+      
+
+>>>>>>> Stashed changes
       {
         "tag": "Question 5 français",
         "patterns": [
@@ -90,6 +139,7 @@
       {
         "tag": "Question 7 français",
         "patterns": [
+<<<<<<< Updated upstream
           "Hello",
           "Hi"
         ],
@@ -127,6 +177,26 @@
             
         ]
       },
+=======
+          "My PC is on Mac",
+          "On mac",
+          "Mac"
+         ],
+         "pb": "utilitaireResoPbCameraMac",
+         "wait": true
+       },
+       {
+        "tag": "QuestionFormatFichierPDF",
+        "patterns": [
+          "Comment connaître le format d'un fichier ?"
+        ],
+        "pb": "FormatFichierPDF",
+        "wait": 1
+      },
+       
+       
+
+>>>>>>> Stashed changes
       {
         "tag": "Question 11 français",
         "patterns": [
