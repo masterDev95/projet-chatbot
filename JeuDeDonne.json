@@ -38,6 +38,77 @@
       "pb": "activationCamera",
       "wait": 1
     },
+
+    {
+      "tag": "QuestionSon",
+      "patterns": [
+        "Je n'arrive pas à entendre le cours",
+        "Je n'entend pas le professeur",
+        "Je n'entend pas l'intervenant",
+        "Je n'entend pas l'étudiant",
+        "Je n'entend pas l'élève",
+        "Je n'arrive pas à suivre le cours car je n'entend pas l'intervenant",
+        "Je n'arrive pas à suivre le cours car je n'entend pas le professeur"
+      ],
+      "responses": [
+        "Avez-vous activé votre son ?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionSonSuite",
+      "patterns": [
+        "Ou est-ce que je peux activé mon son?",
+        "Ou activé le son",
+        "Ou trouver la barre de son",
+        "Comment augmenter le volume du son"
+      ],
+      "pb": "activationSon",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionBulleDiscussion",
+      "patterns": [
+        "Je n'arrive pas à écrire dans la bulle de discussion",
+        "Quand je tape sur une touche cela n'écrit pas dans la bulle de discussion",
+        "L'intervenant peut écrire dans la bulle de discution mais moi non",
+        "L'élève peut écrire dans la bulle de discution mais moi non"
+      ],
+      "responses": [
+        "Etes-vous autorisé à écrire dans la conversation?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionBulleDisuctionSuite",
+      "patterns": [
+        "Comment savoir si l'on est autorisé à écrire dans la bulle de discution?"
+      ],
+      "pb": "activationBulleDiscution",
+      "wait": 1
+    },
+    {
+      "tag": "QuestionMicro",
+      "patterns": [
+        "Le professeur ne m'entend pas pendant le cours",
+        "L'intervenant ne m'entend pas pendant le cours"
+
+      ],
+      "responses": [
+        "Avez-vous allumer votre micro?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionMicroSuite",
+      "patterns": [
+        "Ou se situe l'activation du micro?"
+      ],
+      "pb": "activationMicro",
+      "wait": 1
+    },
+    
+  
     {
       "tag": "reponseUtilisateurAffirmative",
       "patterns": [
@@ -74,13 +145,31 @@
 
       "QuestionBulleDiscussion": {
         "responses": [
-          "Is your Pc on windows 10, Windows 11 ou Mac?"
+          "Avez-vous un clavier filaire ou bluetooth?"
+        ],
+        "ouiNon": true
+      },
+      "QuestionBulleDiscussionClavier": {
+        "responses": [
+          "Dans le cas où c'est un clavier Bluetooth, allez dans Démarrer>Paramètres > Appareils > Bluetooth & autres appareils > Ajouter des Bluetooth ou d'autres appareils > Bluetooth > Clavier Microsoft Bluetooth. Sinon si c'est un clavier filaire vérifiez qu'il soit bien connecté à votre ordinateur."
+        ],
+        "ouiNon": true
+      },
+      "QuestionMicro": {
+        "responses": [
+          "Avez-vous vérifier les paramètre du site?"
+        ],
+        "ouiNon": true
+      },
+      "QuestionMicroParamètreSite": {
+        "responses": [
+          "Alors allez dans : Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Micro pour tester votre micro"
         ],
         "ouiNon": true
       }
     },
     {
-      "tag": "QuestionPC11",
+      "tag": "QuestionCameraPC11",
       "patterns": [
         "My PC is on Windows 11",
         "On Windows 11",
@@ -90,7 +179,7 @@
       "wait": 1
     },
     {
-     "tag": "QuestionPC10",
+     "tag": "QuestionCameraPC10",
      "patterns": [
         "My PC is on Windows 10",
         "On Windows 10",
@@ -100,7 +189,7 @@
       "wait": 1
     },
     {
-      "tag": "QuestionMac",
+      "tag": "QuestionCameraMac",
       "patterns": [
         "My PC is on Mac",
         "On mac",
@@ -108,89 +197,6 @@
        ],
        "pb": "utilitaireResoPbCameraMac",
        "wait": 1
-    },
-    {
-      "tag": "reponseUtilisateurNegative",
-      "patterns": [
-        "No I'm going to look",
-        "No the problem is not solved",
-        "No still not",
-        "not really",
-        "nope",
-        "No"
-      ],
-      "QuestionCamera": {
-        "emptyPb": true,
-        "wait": 1
-      },
-      "QuestionSon": {
-        "emptyPb": true,
-        "wait": 1
-      },
-      "": {
-        "responses": [
-          "Good day and see you soon"
-        ]
-      },
-      "wait1": {
-        "responses": [
-          "Is your Pc on windows 10, Windows 11 ou Mac?"
-        ]
-      },
-      "wait2": {
-        "responses": [
-          "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
-        ],
-        "end": true
-      },
-      "ouiNon": true
-    },
-    {
-      "tag": "reponseUtilisateurIncertaine",
-      "patterns": [
-        "I don't think so",
-        "probably not"
-      ],
-      "QuestionCamera": {
-        "pb": "verificationCamera",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionSon": {
-        "pb": "verificationSon",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionBulleDiscussion": {
-        "pb": "verificationBulleDiscussion",
-        "wait": 1,
-        "ouiNon": true
-      }
-    },
-    {
-      "tag": "QuestionSon",
-      "patterns": [
-        "Je n'arrive pas à entendre le cours",
-        "Je n'entend pas le professeur",
-        "Je n'entend pas l'intervenant",
-        "Je n'arrive pas à suive le cours car je n'entend pas l'intervenant"
-      ],
-      "responses": [
-        "Avez-vous activé votre son ?"
-      ],
-      "follow": true
-    },
-    {
-      "tag": "QuestionSonSuite",
-      "patterns": [
-        "Ou est-ce que je peux activé mon son?",
-        "Ou activé le son",
-        "Ou trouver la barre de son",
-        "Comment augmenter le volume du son",
-        "Or find in Windows the activation of the camera?"
-      ],
-      "pb": "activationSon",
-      "wait": 1
     },
     {
       "tag": "QuestionSonPC11",
@@ -222,58 +228,76 @@
        "pb": "utilitaireResoPbSonMac",
        "wait": 1
     },
+    
     {
-      "tag": "QuestionBulleDiscussion",
+      "tag": "reponseUtilisateurNegative",
       "patterns": [
-        "Je n'arrive pas à écrire dans la bulle de discussion",
-        "Quand je tape sur une touche cela n'écrit pas dans la bulle de discussion",
-        "L'intervenant peu écrire dans la bulle de discution mais moi non"
+        "No I'm going to look",
+        "No the problem is not solved",
+        "No still not",
+        "not really",
+        "nope",
+        "No"
       ],
-      "responses": [
-        "Avez-vous vérifié que votre clavier soit bien relié à votre ordinateur ?"
-      ],
-      "follow": true
+      "QuestionCamera": {
+        "emptyPb": true,
+        "wait": 1
+      },
+      "QuestionSon": {
+        "emptyPb": true,
+        "wait": 1
+      },
+      "": {
+        "responses": [
+          "Good day and see you soon"
+        ]
+      },
+      "wait1": {
+        "responses": [
+          "Is your Pc on windows 10, Windows 11 ou Mac?"
+        ]
+      },
+      
+      "wait2": {
+        "responses": [
+          "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
+        ],
+        "end": true
+      },
+      "ouiNon": true
     },
     {
-      "tag": "QuestionBulleDisuctionSuite",
+      "tag": "reponseUtilisateurIncertaine",
       "patterns": [
-        "Comment je peux voir que mon clavier soit bien relier?",
-        "Ou puis-je vérifier que mon périphérique soit bien detecter",
-        "Ou puis-je vérifier que mon clavier soit bien detecter"
+        "I don't think so",
+        "probably not"
       ],
-      "pb": "activationBulleDiscution",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionBulleDiscussionPC11",
-      "patterns": [
-        "My PC is on Windows 11",
-        "On Windows 11",
-        "Windows 11"
-      ],
-      "pb": "utilitaireResoPbBulleDWindows11",
-      "wait": 1
-    },
-    {
-     "tag": "QuestionBulleDiscussionPC10",
-     "patterns": [
-        "My PC is on Windows 10",
-        "On Windows 10",
-        "Windows 10"
-      ],
-      "pb": "utilitaireResoPbBulleDWindows10",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionBulleDsiscussionMac",
-      "patterns": [
-        "My PC is on Mac",
-        "On mac",
-        "Mac"
-       ],
-       "pb": "utilitaireResoPbBulleDMac",
-       "wait": 1
-    },
+      "QuestionCamera": {
+        "pb": "verificationCamera",
+        "wait": 1,
+        "ouiNon": true
+      },
+      "QuestionSon": {
+        "pb": "verificationSon",
+        "wait": 1,
+        "ouiNon": true
+      },
+      "QuestionBulleDiscussion": {
+        "pb": "verificationBulleDiscussion",
+        "wait": 1,
+        "ouiNon": true
+      },
+      "QuestionMicro": {
+        "pb": "verificationMicro",
+        "wait": 1,
+        "ouiNon": true
+      },
+      "QuestionMicro2": {
+        "pb": "verificationMicro2",
+        "wait": 1,
+        "ouiNon": true
+      }
+    }
   ]
   
 }

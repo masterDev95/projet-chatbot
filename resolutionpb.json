@@ -26,40 +26,36 @@
       },
       {
         "name": "verificationSon",
-        "response": "Veuillez vérifier votre Son"
+        "response": "Veuillez vérifier l'activation de votre Son"
       },
       {
         "name": "utilitaireResoPbSonWindows11",
-        "response": "Alors allez dans: test renvoie bien son windows 11"
+        "response": "Alors allez dans Paramètres>Système>Son et regardez le periphérique de sortie ou bien le volume du son. "
       },
       {
         "name": "utilitaireResoPbSonWindows10",
-        "response": "Alors allez dans :test renvoie bien son windows 10 "
+        "response": "Alors allez dans Démarrer>Paramètres>Système>Son. "
       },
       {
         "name": "utilitaireResoPbSonMac",
-        "response": "Alors allez dans: test renvoie bien son mac"
+        "response": "Allez dans menu Pomme > Préférences Système>Son>Sortie. Assurez-vous que l'option « Haut-parleurs internes » est sélectionnée, que le curseur « Volume de sortie » n'est pas placé tout à gauche et que la case Silence n'est pas cochée. "
       },
       {
         "name": "activationBulleDiscussion",
-        "reponse":"Test Pour trouver la detection du clavier"
+        "reponse":"Vous devez voir avec votre professeur si il vous a donner les droit ou aller dans les paramètre du site en bas à droit pour l'ouverture et les droits de discussions"
       },
       {
         "name": "verificationBulleDiscussion",
-        "response": "Veuillez vérifier que votre clavier soit bien connecté à votre ordinateur, en filiaire ou en bluetoooth"
+        "response": "Veuillez vérifier les droits ou l'ouverture du dialogue dans les paramètres du site."
       },
       {
-        "name": "utilitaireResoPbBulleDWindows11",
-        "response": "Alors allez dans: test renvoie bien son windows 11 BD"
+        "name": "activationMicro",
+        "reponse":"Si vous avez une plateforme avec votre micro veuillez vérifier que le logo muet n'est pas activé. Sinon appuyez sur celui-ci pour activer le micro."
       },
       {
-        "name": "utilitaireResoPbBulleDWindows10",
-        "response": "Alors allez dans :test renvoie bien son windows 10 BD "
-      },
-      {
-        "name": "utilitaireResoPbBulleDMac",
-        "response": "Alors allez dans: test renvoie bien son mac BD"
-      },
+        "name": "verificationMicro",
+        "response": "Veuillez vérifier votre micro"
+      }
 
     ]
 }
