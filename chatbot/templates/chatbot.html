@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Chatbot</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{% static 'script.js' %}" defer></script>
+    </head>
+
+    <body>
+        {% csrf_token %}
+        <div class="chatbox">
+            <header>
+                
+            </header>
+
+            <main id="chatbot-frame">
+                {% for m in msgs %}
+                <div class="msg" id="{{ m.sender }}">{{ m.text }}</div>
+                {% endfor %}
+            </main>
+        
+            <footer>
+                <form>
+                    <input type="text" name="" id="input-msg">
+                    <button type="button" id='submit-btn'>
+                        <img src="{% static 'send-message.png' %}" alt="Submit">
+                    </button>
+                </form>
+            </footer>
+        </div>
+    </body>
+</html>
