@@ -1,13 +1,15 @@
 from django.http import HttpRequest, JsonResponse
 from django.shortcuts import render
 from chatbot.chatbot import Chatbot
-from chatbot.models import Conversation, Message
+from chatbot.models import Message
+from django.views.decorators.http import require_http_methods
 
 # Create your views here.
 
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
+@require_http_methods(["POST"])
 def chatbot(request: HttpRequest):
     cb = Chatbot()
     if request.POST:

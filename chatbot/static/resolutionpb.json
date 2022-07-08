@@ -1,37 +1,88 @@
 {
-    "pbs": [
-      {
-        "name": "activationCamera",
-        "response": "Pensez à activer le bouton de la caméra si vous en avez un sur votre clavier. Puis pensez à enlever le cache devant votre caméra."
-      },
-      {
-        "name": "verificationCamera",
-        "response": "Veuillez vérifier votre caméra"
-      },
-      {
-        "name": "VerificationPC",
-        "response": "Votre Pc est-il sur windows 10, Windows 11 ou Mac?"
-      },
-      {
-        "name": "utilitaireResoPbCameraWindows11",
-        "response": "Alors allez dans : Paramètre > Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Caméra"
-      },
-      {
-        "name": "utilitaireResoPbCameraWindows10",
-        "response": "Alors allez dans : Paramètre> Confidentialité> Caméra"
-      },
-      {
-        "name": "utilitaireResoPbCameraMac",
-        "response": "Alors allez dans:"
-      },
-      {
-        "name": "activationFichierBulleDiscussion",
-        "response": "Allez dans les propriétés en faisant un clic droit sur votre fichier."
-      },
-      {
-        "name": "FormatFichierPDF",
-        "response": "Allez dans l'explorateur, retrouvez votre fichier et regardez l'extension du fichier."
-      }
-
-    ]
+  "pbs": [
+    {
+      "name": "activationCamera",
+      "response": "Pensez à activer le bouton de la caméra si vous en avez un sur votre clavier. Puis pensez à enlever le cache devant votre caméra."
+    },
+    {
+      "name": "verificationCamera",
+      "response": "Veuillez vérifier votre caméra"
+    },
+    {
+      "name": "utilitaireResoPbCameraWindows11",
+      "response": "Alors allez dans : Paramètre > Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Caméra"
+    },
+    {
+      "name": "utilitaireResoPbCameraWindows10",
+      "response": "Alors allez dans : Paramètre> Confidentialité> Caméra"
+    },
+    {
+      "name": "utilitaireResoPbCameraMac",
+      "response": "Alors allez dans:"
+    },
+    {
+      "name": "activationSon",
+      "reponse":"Vous trouverez en bas à droite dans la barre des tâches"
+    },
+    {
+      "name": "verificationSon",
+      "response": "Veuillez vérifier l'activation de votre Son"
+    },
+    {
+      "name": "utilitaireResoPbSonWindows11",
+      "response": "Alors allez dans Paramètres>Système>Son et regardez le periphérique de sortie ou bien le volume du son. "
+    },
+    {
+      "name": "utilitaireResoPbSonWindows10",
+      "response": "Alors allez dans Démarrer>Paramètres>Système>Son. "
+    },
+    {
+      "name": "utilitaireResoPbSonMac",
+      "response": "Allez dans menu Pomme > Préférences Système>Son>Sortie. Assurez-vous que l'option « Haut-parleurs internes » est sélectionnée, que le curseur « Volume de sortie » n'est pas placé tout à gauche et que la case Silence n'est pas cochée. "
+    },
+    {
+      "name": "activationBulleDiscussion",
+      "reponse":"Vous devez voir avec votre professeur si il vous a donner les droit ou aller dans les paramètre du site en bas à droit pour l'ouverture et les droits de discussions"
+    },
+    {
+      "name": "verificationBulleDiscussion",
+      "response": "Veuillez vérifier les droits ou l'ouverture du dialogue dans les paramètres du site."
+    },
+    {
+      "name": "activationMicro",
+      "reponse":"Si vous avez une plateforme avec votre micro veuillez vérifier que le logo muet n'est pas activé. Sinon appuyez sur celui-ci pour activer le micro."
+    },
+    {
+      "name": "verificationMicro",
+      "response": "Veuillez vérifier votre micro"
+    },
+    {
+      "name": "verificationMicro2",
+      "response": "Veuillez vérifier les paramètre du site"
+    },
+    {
+      "name": "activationFichierBulleDiscussion",
+      "response": "Allez dans les propriétés en faisant un clic droit sur votre fichier."
+    },
+    {
+      "name": "FormatFichierPDF",
+      "response": "Allez dans l'explorateur, retrouvez votre fichier et regardez l'extension du fichier."
+    },
+    {
+      "name": "activationConnectionCours",
+      "response": "Vous trouverez en bas à droite de votre écran sur la barre des tâches."
+    },
+    {
+      "name": "verificationConnexionCours",
+      "response": "Veuillez vérifier votre connexion internet."
+    },
+    {
+      "name": "verificationDoubleEcran",
+      "response": "Veuillez vérifier votre branchement."
+    },
+    {
+      "name": "utilitaireResoPbEcranDiubleParamètre",
+      "response": "Vous devez aller dans paramètre >Système>Ecran>Ecran Multiples."
+    }
+  ]
 }
