@@ -26,9 +26,36 @@
           "How do I get my camera to work"
         ],
         "responses": [
-          "Have you activated your camera first?"
+            
+        ]
+      },
+      {
+        "tag": "QuestionFichierBulleDiscussion",
+        "patterns": [
+          "Je n'arrive pas à envoyer de fichier dans la bulle de discussion",
+          "Je ne peux pas insérer de fichier dans la discussion"
+        ],
+        "responses": [
+          "Avez-vous vérifié que le fichier ne soit pas trop volumineux?"
         ],
         "follow": true
+      },
+      {
+        "tag": "QuestionFichierBulleDiscussionSuite",
+        "patterns": [
+          "Comment vérifier la taille de mon fichier ?",
+          "Comment je connais la taille de mon fichier ?"
+        ],
+        "pb": "activationFichierBulleDiscussion",
+        "wait": 1
+      },
+
+      {
+        "tag": "Question 3 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
       },
       {
         "tag": "QuestionCameraSuite",
@@ -36,8 +63,19 @@
           "Where is the activation of the camera?",
           "Or find in Windows the activation of the camera?"
         ],
-        "pb": "activationCamera",
-        "wait": true
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 5 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
       },
 
       {
@@ -70,9 +108,8 @@
       {
         "tag": "QuestionPC11",
         "patterns": [
-          "My PC is on Windows 11",
-          "On Windows 11",
-          "Windows 11"
+          "Hello",
+          "Hi"
         ],
         "pb": "utilitaireResoPbCameraWindows11",
         "wait": true
@@ -90,6 +127,23 @@
       {
         "tag": "QuestionMac",
         "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
+      {
+        "tag": "Question 10 français",
+        "patterns": [
+          "Hello",
+          "Hi"
+        ],
+        "responses": [
+            
+        ]
+      },
           "My PC is on Mac",
           "On mac",
           "Mac"
@@ -97,7 +151,14 @@
          "pb": "utilitaireResoPbCameraMac",
          "wait": true
        },
-
+       {
+        "tag": "QuestionFormatFichierPDF",
+        "patterns": [
+          "Comment connaître le format d'un fichier ?"
+        ],
+        "pb": "FormatFichierPDF",
+        "wait": 1
+      },
       {
         "tag": "reponseUtilisateurNegative",
         "patterns": [
