@@ -8,6 +8,7 @@ from chatbot.models import Conversation, Message
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
+@require_POST
 def chatbot(request: HttpRequest):
     cb = Chatbot()
     if request.POST:
