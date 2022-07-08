@@ -187,15 +187,13 @@
           "Is your Pc on windows 10, Windows 11 ou Mac?"
         ],
         "ouiNon": true
-      }, 
-
+      },
       "QuestionSon": {
         "responses": [
           "Is your Pc on windows 10, Windows 11 ou Mac?"
         ],
         "ouiNon": true
       },
-
       "QuestionBulleDiscussion": {
         "responses": [
           "Avez-vous un clavier filaire ou bluetooth?"
