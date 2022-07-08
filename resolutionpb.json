@@ -23,6 +23,14 @@
       {
         "name": "utilitaireResoPbCameraMac",
         "response": "Alors allez dans:"
+      },
+      {
+        "name": "activationFichierBulleDiscussion",
+        "response": "Allez dans les propriétés en faisant un clic droit sur votre fichier."
+      },
+      {
+        "name": "FormatFichierPDF",
+        "response": "Allez dans l'explorateur, retrouvez votre fichier et regardez l'extension du fichier."
       }
 
     ]

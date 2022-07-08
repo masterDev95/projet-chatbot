@@ -83,7 +83,7 @@ def get_response(intents_list, intents_json):
                         end = True
                     # Si on est dans un cas ou on doit attendre le bot lancera un message avec une attente de 5 secs
                     if 'wait' in i[wait_string].keys():
-                        return resolution_pb_wait[wait_string]['wait'], (i[wait_string]['pb'])
+                        return resolution_pb_wait(i[wait_string]['wait'], i[wait_string]['pb'])
                     # Dans le cas ou il n'y a pas d'attente ou de cloture de conversation le bot répond aléatoire en rapport avec la derniere demande de l'utilisateur
                     return random.choice(i[wait_string]['responses'])
                 if 'end' in i[last_question_tag].keys():
