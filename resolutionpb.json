@@ -55,7 +55,34 @@
       {
         "name": "verificationMicro",
         "response": "Veuillez vérifier votre micro"
+      },
+      {
+        "name": "verificationMicro2",
+        "response": "Veuillez vérifier les paramètre du site"
+      },
+      {
+        "name": "activationFichierBulleDiscussion",
+        "response": "Allez dans les propriétés en faisant un clic droit sur votre fichier."
+      },
+      {
+        "name": "FormatFichierPDF",
+        "response": "Allez dans l'explorateur, retrouvez votre fichier et regardez l'extension du fichier."
+      },
+      {
+        "name": "activationConnectionCours",
+        "response": "Vous trouverez en bas à droite de votre écran sur la barre des tâches."
+      },
+      {
+        "name": "verificationConnexionCours",
+        "response": "Veuillez vérifier votre connexion internet."
+      },
+      {
+        "name": "verificationDoubleEcran",
+        "response": "Veuillez vérifier votre branchement."
+      },
+      {
+        "name": "utilitaireResoPbEcranDiubleParamètre",
+        "response": "Vous devez aller dans paramètre >Système>Ecran>Ecran Multiples."
       }
-
     ]
 }
