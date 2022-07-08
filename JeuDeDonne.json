@@ -1,46 +1,29 @@
 {
     "intents": [
       {
-        "tag": "Bonjour Français",
+        "tag": "Hello ",
         "patterns": [
-          "bonjour",
-          "salut",
-          "wesh",
-          "salutation",
-          "Bonjour ça va",
-          "ça roule?",
-          "Bonjour, comment tu vas?"
+          "Hello",
+          "Hi",
+          "Hey",
+          "Good morning",
+          "Good afternoon",
+          "Yo",
+          "Greetings"
         ],
         "responses": [
-          "Bonjour, Que puis-je faire pour vous?",
-          "Bonjour, ça va très bien. Que puis-je faire pour vous?"
+          "Hello,you have already asked me, but how can I help you?"
         ]
       },
       {
-        "tag": "Bonjour Anglais",
+        "tag": "QuestionCamera",
         "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-
-        ]
-      },
-      {
-        "tag": "Question 1 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 2 français",
-        "patterns": [
-          "Hello",
-          "Hi"
+          "My camera does not work",
+          "I can't activate my camera.",
+          "I can't activate my camera during the course",
+          "I can't activate my camera during the course",
+          "My camera doesn't work.",
+          "How do I get my camera to work"
         ],
         "responses": [
             
@@ -73,13 +56,19 @@
           "Hello",
           "Hi"
         ],
-<<<<<<< Updated upstream
+      },
+      {
+        "tag": "QuestionCameraSuite",
+        "patterns": [
+          "Where is the activation of the camera?",
+          "Or find in Windows the activation of the camera?"
+        ],
         "responses": [
             
         ]
       },
       {
-        "tag": "Question 4 français",
+        "tag": "Question 5 français",
         "patterns": [
           "Hello",
           "Hi"
@@ -88,7 +77,16 @@
             
         ]
       },
-=======
+
+      {
+        "tag": "reponseUtilisateurAffirmative",
+        "patterns": [
+          "Yes",
+          "Yes I did",
+          "I have already done so",
+          "Yes it's good",
+          "Yes, the problem is solved"
+        ],
         "": {
           "responses": [
             "Hello, what can I do for you? ? "
@@ -102,63 +100,32 @@
         },
         "QuestionCamera": {
           "pb": "VerificationPC",
-          "wait": 2,
-          "ouiNon": true
+          "wait": 2
         },
-        "QuestionFichierBulle": {
-          "responses": [
-            "Avez-vous vérifié que le fichier soit bien un fichier pdf ?",
-      ""
-          ],
-          "ouiNon": true
-        }
+        "ouiNon": true
       },
-      
 
->>>>>>> Stashed changes
       {
-        "tag": "Question 5 français",
+        "tag": "QuestionPC11",
         "patterns": [
           "Hello",
           "Hi"
         ],
-        "responses": [
-            
-        ]
+        "pb": "utilitaireResoPbCameraWindows11",
+        "wait": true
       },
       {
-        "tag": "Question 6 français",
-        "patterns": [
-          "Hello",
-          "Hi"
+       "tag": "QuestionPC10",
+       "patterns": [
+         "My PC is on Windows 10",
+         "On Windows 10",
+         "Windows 10"
         ],
-        "responses": [
-            
-        ]
+        "pb": "utilitaireResoPbCameraWindows10",
+        "wait": true
       },
       {
-        "tag": "Question 7 français",
-        "patterns": [
-<<<<<<< Updated upstream
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 8 français",
-        "patterns": [
-          "Hello",
-          "Hi"
-        ],
-        "responses": [
-            
-        ]
-      },
-      {
-        "tag": "Question 9 français",
+        "tag": "QuestionMac",
         "patterns": [
           "Hello",
           "Hi"
@@ -177,7 +144,6 @@
             
         ]
       },
-=======
           "My PC is on Mac",
           "On mac",
           "Mac"
@@ -193,37 +159,42 @@
         "pb": "FormatFichierPDF",
         "wait": 1
       },
-       
-       
-
->>>>>>> Stashed changes
       {
-        "tag": "Question 11 français",
+        "tag": "reponseUtilisateurNegative",
         "patterns": [
-          "Hello",
-          "Hi"
+          "NO",
+          "No, I'm going to look",
+          "No, the problem is not solved",
+          "No, still not"
         ],
-        "responses": [
-            
-        ]
+        "QuestionCamera": {
+         "emptyPb": true,
+        "wait": 1
+       },
+        
+        "wait1": {
+          "pb": "VerificationPC",
+          "wait": 2
+        },
+        "wait2": {
+          "responses": [
+            "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
+          ],
+          "end": true
+        },
+        "ouiNon": true
       },
       {
-        "tag": "aurevoir",
+        "tag": "reponseUtilisateurIncertaine",
         "patterns": [
-          "au revoir",
-          "adieu",
-          "a plus tard",
-          "je dois y aller",
-          "bonne journée",
-          "bye",
-          "ciao",
-          "on se revoit plus tard",
-          "a un de ces quatres"
+          "I don't think so",
+          "probably not"
         ],
-        "responses": [
-          "Au revoir!",
-          "Au plaisir de vous revoir!"
-        ]
+        "QuestionCamera": {
+          "pb": "verificationCamera",
+          "wait": 1
+        },
+        "ouiNon": true
       }
     ]
-  }
+}
