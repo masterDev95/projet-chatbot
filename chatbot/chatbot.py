@@ -1,5 +1,5 @@
 import os
-import random
+import secrets
 import json
 import pickle
 import numpy
@@ -91,7 +91,7 @@ class Chatbot:
                             if 'end' in i['wait'].keys():
                                 self.end = True
                             # Selectionne aléatoirement un élément parmit la liste
-                            return [random.choice(i['wait']['responses'])]
+                            return [secrets.choice(i['wait']['responses'])]
                         # Selon le niveau de conversation un objet "wait" différent sera sélectionner
                         wait_string = 'wait'+str(self.pb_resolu_count)
                         self.wait = False
@@ -102,7 +102,7 @@ class Chatbot:
                         if 'wait' in i[wait_string].keys():
                             return self.resolution_pb_wait(i[wait_string]['wait'], i[wait_string]['pb'])
                         # Dans le cas ou il n'y a pas d'attente ou de cloture de conversation le bot répond aléatoire en rapport avec la derniere demande de l'utilisateur
-                        return [random.choice(i[wait_string]['responses'])]
+                        return [secrets.choice(i[wait_string]['responses'])]
                     if 'end' in i[self.last_question_tag].keys():
                         self.end = True
                     # Attendre 5 secondes et demander si le pbm est résolu
@@ -111,14 +111,16 @@ class Chatbot:
                             return self.resolution_pb_wait(i[self.last_question_tag]['wait'])
                         return self.resolution_pb_wait(i[self.last_question_tag]['wait'], i[self.last_question_tag]['pb'])
                     # Dans le cas ou i n'y a pas de wait renvoyer une réponse aléatoire en rapport avec la derniere demande
-                    return [random.choice(i[self.last_question_tag]['responses'])]
+                    return [secrets.choice(i[self.last_question_tag]['responses'])]
                 # Le bot attend 5 secondes puis renvoie un message
                 if 'wait' in i.keys():
+                    print('lol')
                     return self.resolution_pb_wait(i['wait'], i['pb'])
-                return [random.choice(i['responses'])]
+                return [secrets.choice(i['responses'])]
 
     # Fonction résolution qui a pour parametre un problème précis (attente en cas de relance)
     def resolution_pb_wait(self, wait_inc, pb_name=None):
+        print('par la')
         response = []
 
         # Si le problème a pas de nom attendre sinon mettre la solution du problème
@@ -134,39 +136,11 @@ class Chatbot:
         response.append('Avez-vous résolu votre problème?')
         return response
 
-    # Mettre tout le texte entrée par l'utilisateur en minuscule
-    # Variable entrée utilisateur et la réponse du bot
-    def main(self):
-        print('Bonjour!')
-        while True:
-            message = input('> ').lower()
-
-            # Traitement exceptionel du 'oui' et 'non' non gérés par le training
-            if message == 'no' or message == 'yes':
-                if message == 'no':
-                    res = self.get_response(
-                        [{'intent': 'reponseUtilisateurNegative'}], self.intents)
-                if message == 'yes':
-                    res = self.get_response(
-                        [{'intent': 'reponseUtilisateurAffirmative'}], self.intents)
-            else:
-                ints = self.predict_class(message)
-                res = self.get_response(ints, self.intents)
-
-            i = 0
-            for r in res:
-                if i > 0:
-                    time.sleep(5)
-                print(r)
-                i += 1
-            if self.end:
-                quit()
-
-
-    def send_msg_to_chatbot(self, msg):
+    def send_msg_to_chatbot(self, msg: str):
         response = {}
         response['text'] = []
         response['extra'] = ''
+        msg = msg.lower()
         
         if msg == 'no' or msg == 'yes':
             if msg == 'no':
@@ -178,7 +152,10 @@ class Chatbot:
         else:
             ints = self.predict_class(msg)
             res = self.get_response(ints, self.intents)
-
+            
+        print(self.last_question_tag)
+        print(self.wait)
+            
         i = 0
         for r in res:
             if i > 0:
@@ -186,4 +163,7 @@ class Chatbot:
             response['text'].append(r)
             i += 1
         if self.end: response['extra'] = 'end'
+        response['last_question_tag'] = self.last_question_tag
+        response['pb_resolu_count'] = self.pb_resolu_count
+        response['wait'] = self.wait
         return response

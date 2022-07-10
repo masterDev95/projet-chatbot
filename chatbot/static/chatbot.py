@@ -52,6 +52,7 @@ def get_response(intents_list, intents_json):
     global wait
     global pb_resolu_count
     global end
+    print(wait)
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']    
 

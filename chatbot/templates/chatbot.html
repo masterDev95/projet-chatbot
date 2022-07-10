@@ -14,20 +14,21 @@
 
     <body>
         {% csrf_token %}
+        <input type='hidden' name='last_question_tag' value=''>
+        <input type='hidden' name='pb_resolu_count' value='0'>
+        <input type='hidden' name='wait' value='False'>
         <div class="chatbox">
             <header>
                 
             </header>
 
             <main id="chatbot-frame">
-                {% for m in msgs %}
-                <div class="msg" id="{{ m.sender }}">{{ m.text }}</div>
-                {% endfor %}
+                <div class="msg" id="bot">Hello, I'm EliBlue, how can I help you?</div>
             </main>
         
             <footer>
                 <form>
-                    <input type="text" name="" id="input-msg">
+                    <input type="text" name="" id="input-msg" autocomplete="false">
                     <button type="button" id='submit-btn'>
                         <img src="{% static 'send-message.png' %}" alt="Submit">
                     </button>

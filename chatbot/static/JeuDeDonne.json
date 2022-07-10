@@ -38,130 +38,6 @@
       "pb": "activationCamera",
       "wait": 1
     },
-
-    {
-      "tag": "QuestionSon",
-      "patterns": [
-        "I can't hear the lecture",
-        "I can't hear the teacher",
-        "I can't hear the speaker",
-        "I can't hear the student",
-        "I can't follow the lesson because I can't hear the teacher"
-      ],
-      "responses": [
-        "Have you activated your sound?"
-      ],
-      "follow": true
-    },
-    {
-      "tag": "QuestionSonSuite",
-      "patterns": [
-        "Where can I activate my sound?",
-        "Or turned on the sound",
-        "Where to find the sound bar",
-        "How to increase the volume of the sound"
-      ],
-      "pb": "activationSon",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionBulleDiscussion",
-      "patterns": [
-        "I can't write in the discussion bubble.",
-        "When I tap a key it doesn't write in the chat bubble.",
-        "The speaker can write in the discussion bubble but I cannot.",
-        "The student can write in the discussion bubble but I cannot."
-      ],
-      "responses": [
-        "Are you allowed to write in the conversation?"
-      ],
-      "follow": true
-    },
-    {
-      "tag": "QuestionBulleDisuctionSuite",
-      "patterns": [
-        "How do I know if I am allowed to write in the chat room?"
-      ],
-      "pb": "activationBulleDiscution",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionMicro",
-      "patterns": [
-        "The teacher can't hear me during the lesson.",
-        "The teacher can't hear me during the lesson."
-
-      ],
-      "responses": [
-        "Did you turn on your microphone?"
-      ],
-      "follow": true
-    },
-    {
-      "tag": "QuestionMicroSuite",
-      "patterns": [
-        "Where is the activation of the microphone?"
-      ],
-      "pb": "activationMicro",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionfichierBulleDiscussion",
-      "patterns": [
-        "I can't upload a file in the chat room.",
-        "I can't insert a file in the discussion."
-
-      ],
-      "responses": [
-        "Have you checked that the file is not too large?"
-      ],
-      "follow": true
-    },
-    {
-      "tag": "QuestionFichierBulleDiscussionSuite",
-      "patterns": [
-        "How do I check the size of my file?",
-        "How do I know the size of my file ?"
-      ],
-      "pb": "activationFichierBulleDiscussion",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionconnectionCours",
-      "patterns": [
-        "I can't connect to the course",
-        "I can't access the course"
-
-      ],
-      "responses": [
-        "Have you checked your internet connection"
-      ],
-      "follow": true
-    },
-    {
-      "tag": "QuestionConnectionCoursSuite",
-      "patterns": [
-        "Yes is the internet connection",
-        "Where is the wifi"
-      ],
-      "pb": "activationConnectionCours",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionDoubleEcran",
-      "patterns": [
-        "I can't get a dual screen.",
-        "I want to add a screen.",
-        "I need a dual screen but I can't get it on."
-
-      ],
-      "responses": [
-        "Avez-vous branché votre cable HDMI ou VGA sur l'écran et sur votre PC"
-      ],
-      "follow": true
-    },
-    
-  
     {
       "tag": "reponseUtilisateurAffirmative",
       "patterns": [
@@ -184,56 +60,13 @@
       },
       "QuestionCamera": {
         "responses": [
-          "Is your Pc on windows 10, Windows 11 ou Mac?"
-        ],
-        "ouiNon": true
+          "Votre Pc est-il sur windows 10, Windows 11 ou Mac?"
+        ]
       },
-      "QuestionSon": {
-        "responses": [
-          "Is your Pc on windows 10, Windows 11 ou Mac?"
-        ],
-        "ouiNon": true
-      },
-      "QuestionBulleDiscussion": {
-        "responses": [
-          "Avez-vous un clavier filaire ou bluetooth?"
-        ],
-        "ouiNon": true
-      },
-      "QuestionBulleDiscussionClavier": {
-        "responses": [
-          "Dans le cas où c'est un clavier Bluetooth, allez dans Démarrer>Paramètres > Appareils > Bluetooth & autres appareils > Ajouter des Bluetooth ou d'autres appareils > Bluetooth > Clavier Microsoft Bluetooth. Sinon si c'est un clavier filaire vérifiez qu'il soit bien connecté à votre ordinateur."
-        ],
-        "ouiNon": true
-      },
-      "QuestionMicro": {
-        "responses": [
-          "Avez-vous vérifier les paramètre du site?"
-        ],
-        "ouiNon": true
-      },
-      "QuestionMicroParamètreSite": {
-        "responses": [
-          "Alors allez dans : Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Micro pour tester votre micro"
-        ],
-        "ouiNon": true
-      },
-      "QuestionFichierBulle": {
-        "responses": [
-          "Avez-vous vérifié que le fichier soit bien un fichier pdf ?"
-        ],
-        "ouiNon": true
-      },
-      "QuestionDoubleEcran": {
-        "responses": [
-          "Avez-vous paramétré votre ordinateur pour avoir un double écran?"
-        ],
-        "ouiNon": true
-      }
-
+      "ouiNon": true
     },
     {
-      "tag": "QuestionCameraPC11",
+      "tag": "QuestionPC11",
       "patterns": [
         "My PC is on Windows 11",
         "On Windows 11",
@@ -243,7 +76,7 @@
       "wait": 1
     },
     {
-     "tag": "QuestionCameraPC10",
+     "tag": "QuestionPC10",
      "patterns": [
         "My PC is on Windows 10",
         "On Windows 10",
@@ -253,7 +86,7 @@
       "wait": 1
     },
     {
-      "tag": "QuestionCameraMac",
+      "tag": "QuestionMac",
       "patterns": [
         "My PC is on Mac",
         "On mac",
@@ -262,46 +95,6 @@
        "pb": "utilitaireResoPbCameraMac",
        "wait": 1
     },
-    {
-      "tag": "QuestionSonPC11",
-      "patterns": [
-        "My PC is on Windows 11",
-        "On Windows 11",
-        "Windows 11"
-      ],
-      "pb": "utilitaireResoPbSonWindows11",
-      "wait": 1
-    },
-    {
-     "tag": "QuestionSonPC10",
-     "patterns": [
-        "My PC is on Windows 10",
-        "On Windows 10",
-        "Windows 10"
-      ],
-      "pb": "utilitaireResoPbSonWindows10",
-      "wait": 1
-    },
-    {
-      "tag": "QuestionSonMac",
-      "patterns": [
-        "My PC is on Mac",
-        "On mac",
-        "Mac"
-       ],
-       "pb": "utilitaireResoPbSonMac",
-       "wait": 1
-    },
-    {
-      "tag": "QuestionDoubleEcranParamétrageOrdi",
-      "patterns": [
-        "Comment faire le  paramétrage pour avoir un double écran?",
-        "avoir le double écran sur les paramètres."
-      ],
-      "pb": "utilitaireResoPbEcranDiubleParamètre",
-      "wait": 1
-    },
-    
     {
       "tag": "reponseUtilisateurNegative",
       "patterns": [
@@ -316,10 +109,6 @@
         "emptyPb": true,
         "wait": 1
       },
-      "QuestionSon": {
-        "emptyPb": true,
-        "wait": 1
-      },
       "": {
         "responses": [
           "Good day and see you soon"
@@ -327,10 +116,9 @@
       },
       "wait1": {
         "responses": [
-          "Is your Pc on windows 10, Windows 11 ou Mac?"
+          "Votre Pc est-il sur windows 10, Windows 11 ou Mac?"
         ]
       },
-      
       "wait2": {
         "responses": [
           "In this case please contact our Hotline to have one of our technicians: 07 82 24 94 81 Good day"
@@ -347,39 +135,9 @@
       ],
       "QuestionCamera": {
         "pb": "verificationCamera",
-        "wait": 1,
-        "ouiNon": true
+        "wait": 1
       },
-      "QuestionSon": {
-        "pb": "verificationSon",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionBulleDiscussion": {
-        "pb": "verificationBulleDiscussion",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionMicro": {
-        "pb": "verificationMicro",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionMicro2": {
-        "pb": "verificationMicro2",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionConnectionCours": {
-        "pb": "verificationConnexionCours",
-        "wait": 1,
-        "ouiNon": true
-      },
-      "QuestionDoubleEcran": {
-        "pb": "verificationDoubleEcran",
-        "wait": 1,
-        "ouiNon": true
-      }
+      "ouiNon": true
     }
   ]
 }
