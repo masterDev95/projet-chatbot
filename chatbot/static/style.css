@@ -22,33 +22,33 @@
     font-weight: 300;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow: hidden;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.chatbox {
+.chatbot {
     width: 380px;
     height: 550px;
     margin: 0;
-    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.71);
-    -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.71);
-    -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.71);
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.71);
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.71);
     border-radius: 5px;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
 }
 
 header {
     height: var(--hauteur-header);
-    /* background: linear-gradient(135deg, rgba(3, 177, 185, 1) 0%, rgba(9, 118, 168, 1) 100%); */
     background: url(header-bg.jpg);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 main {
@@ -76,12 +76,7 @@ input {
     padding: 8px;
 }
 
-button {
-    background: none;
-    border: none;
-}
-
-img {
+input[type="image"] {
     width: 25px;
 }
 
@@ -142,4 +137,60 @@ input[type="text"]:focus {
 
 .fin-discussion img {
     margin-right: 12px;
+}
+
+#fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.iconbutton {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 12px 1px;
+}
+
+.iconbutton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    background: #8394e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closed {
+    height: 0;
+    box-shadow: none;
+}
+
+.closed * {
+    display: none;
+}
+
+#minimize-chatbot {
+    width: 64px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #00000075;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+}
+
+.fab-icon {
+    width: 48px;
 }

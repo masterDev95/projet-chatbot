@@ -5,6 +5,9 @@ const csrf = document.getElementsByName('csrfmiddlewaretoken');
 const last_question_tag = document.getElementsByName('last_question_tag');
 const pb_resolu_count = document.getElementsByName('pb_resolu_count');
 const wait = document.getElementsByName('wait');
+const fabContainer = document.getElementById('fab-container');
+const chatbotContainer = document.getElementById('chatbot-container');
+const minimizeChatbot = document.getElementById('minimize-chatbot');
 
 inputMsg.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -15,6 +18,8 @@ inputMsg.addEventListener('keypress', (e) => {
 
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
+
+    if (inputMsg.value === '') return;
     
     const fd = new FormData();
     fd.append('csrfmiddlewaretoken', csrf[0].value)
@@ -65,3 +70,17 @@ submitBtn.addEventListener('click', (e) => {
         processData: false,
     });
 });
+
+function chatbotMinimizeToggle() {
+    chatbotContainer.classList.toggle('closed');
+    fabContainer.classList.toggle('closed');
+}
+
+fabContainer.addEventListener('click', (e) => {
+    chatbotMinimizeToggle();
+});
+
+minimizeChatbot.addEventListener('click', (e) => {
+    chatbotMinimizeToggle();
+});
+
