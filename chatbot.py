@@ -1,3 +1,4 @@
+#Importation des bibliothèques
 import random
 import json
 import pickle
