@@ -8,6 +8,8 @@ const wait = document.getElementsByName('wait');
 const fabContainer = document.getElementById('fab-container');
 const chatbotContainer = document.getElementById('chatbot-container');
 const minimizeChatbot = document.getElementById('minimize-chatbot');
+const footerElement = document.getElementsByTagName('footer')[0];
+let firstOpen = true;
 
 inputMsg.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -72,6 +74,43 @@ submitBtn.addEventListener('click', (e) => {
 });
 
 function chatbotMinimizeToggle() {
+    if (firstOpen) {
+        firstOpen = false;
+        const videoContainer = document.createElement('div');
+        const videoAnim = document.createElement('video');
+        const firstMessageContainer = document.createElement('div');
+        const sonRobot = document.createElement('audio');
+        
+        videoContainer.classList.add('video-container');
+        videoAnim.src = '/static/anim-robot.mp4'
+        videoAnim.autoplay = true;
+        videoContainer.appendChild(videoAnim);
+
+        firstMessageContainer.classList.add('msg');
+        firstMessageContainer.id = 'bot';
+        firstMessageContainer.innerText = 'Hello, I\'m EliBlue, how can I help you?';
+
+        sonRobot.src = '/static/son-robot.mp3';
+        sonRobot.volume = .5;
+
+        footerElement.classList.add('closed');
+        chatbotFrame.style.height = 'calc(100% - var(--hauteur-header) - 8px)';
+        chatbotFrame.style.backgroundColor = '#90afe3';
+        chatbotFrame.appendChild(videoContainer);
+        document.body.appendChild(sonRobot);
+
+        setTimeout(() => {
+            sonRobot.play();
+        }, 300);
+
+        setTimeout(() => {
+            chatbotFrame.style.backgroundColor = 'initial';
+            chatbotFrame.removeChild(videoContainer);
+            chatbotFrame.appendChild(firstMessageContainer);
+            footerElement.classList.remove('closed');
+            chatbotFrame.style.height = 'calc(100% - var(--hauteur-footer) - var(--hauteur-header) - 8px)';
+        }, 2000);
+    }
     chatbotContainer.classList.toggle('closed');
     fabContainer.classList.toggle('closed');
 }

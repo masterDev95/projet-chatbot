@@ -133,7 +133,7 @@ class Chatbot:
         self.pb_resolu_count += wait_inc
         # Variable requise pour l'attente des 5 secondes et sa réponse
         self.wait = True
-        response.append('Avez-vous résolu votre problème?')
+        response.append('Did you solve your problem?')
         return response
 
     def send_msg_to_chatbot(self, msg: str):

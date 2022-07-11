@@ -10,15 +10,15 @@
     },
     {
       "name": "utilitaireResoPbCameraWindows11",
-      "response": "Alors allez dans : Paramètre > Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Caméra"
+      "response": "Go to Settings > System > Sound and look at the output device or sound volume."
     },
     {
       "name": "utilitaireResoPbCameraWindows10",
-      "response": "Alors allez dans : Paramètre> Confidentialité> Caméra"
+      "response": "Go to Start>Settings>System>Sound."
     },
     {
       "name": "utilitaireResoPbCameraMac",
-      "response": "Alors allez dans:"
+      "response": "Go to Apple menu > System Preferences > Sound > Output. Make sure that \"Internal Speakers\" is selected, that the \"Output Volume\" slider is not set to the far left and that the Mute box is not checked."
     },
     {
       "name": "activationSon",

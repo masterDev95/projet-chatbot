@@ -23,18 +23,22 @@
 
         <div id="chatbot-container" class="chatbot closed">
             <header>
+                <div class="cb-title-container">
+                    <div class="chatbot-title">
+                        Chatbot Eliblue
+                    </div>
+                </div>
                 <div id="minimize-chatbot">
                     <i class="fa-solid fa-minus"></i>
                 </div>
             </header>
 
             <main id="chatbot-frame">
-                <div class="msg" id="bot">Hello, I'm EliBlue, how can I help you?</div>
             </main>
         
             <footer>
                 <form>
-                    <input type="text" name="" id="input-msg" autocomplete="false">
+                    <input type="text" name="" id="input-msg" autocomplete="off">
                     <input id='submit-btn' type="image" name="submit" src="{% static 'send-message.png' %}" border="0" alt="Submit"/>
                 </form>
             </footer>

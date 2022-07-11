@@ -105,6 +105,10 @@
         "nope",
         "No"
       ],
+      "QuestionSon": {
+        "emptyPb": true,
+        "wait": 1
+      },
       "QuestionCamera": {
         "emptyPb": true,
         "wait": 1
@@ -138,6 +142,31 @@
         "wait": 1
       },
       "ouiNon": true
+    },
+    {
+      "tag": "QuestionSon",
+      "patterns": [
+        "I can't hear the lecture",
+        "I can't hear the teacher",
+        "I can't hear the speaker",
+        "I can't hear the student",
+        "I can't follow the lesson because I can't hear the teacher"
+      ],
+      "responses": [
+        "Have you activated your sound?"
+      ],
+      "follow": true
+    },
+    {
+      "tag": "QuestionSonSuite",
+      "patterns": [
+        "Where can I activate my sound?",
+        "Or turned on the sound",
+        "Where to find the sound bar",
+        "How to increase the volume of the sound"
+      ],
+      "pb": "activationSon",
+      "wait": 1
     }
   ]
 }
