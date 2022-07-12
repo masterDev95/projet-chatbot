@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Chatbot</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+            integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="{% static 'script.js' %}" defer></script>
+    </head>
+
+    <body>
+        {% csrf_token %}
+        <input type='hidden' name='last_question_tag' value=''>
+        <input type='hidden' name='pb_resolu_count' value='0'>
+        <input type='hidden' name='wait' value='False'>
+
+        <div id="chatbot-container" class="chatbot closed">
+            <header>
+                <div class="cb-title-container">
+                    <div class="chatbot-title">
+                        Chatbot Eliblue
+                    </div>
+                </div>
+                <div id="minimize-chatbot">
+                    <em class="fa-solid fa-minus"></em>
+                </div>
+            </header>
+
+            <main id="chatbot-frame">
+            </main>
+        
+            <footer>
+                <form>
+                    <input type="text" name="" id="input-msg" autocomplete="off">
+                    <input id='submit-btn' type="image" name="submit" src="{% static 'send-message.png' %}" border="0" alt="Submit"/>
+                </form>
+            </footer>
+        </div>
+
+        <div id="fab-container">
+            <div class="button iconbutton">
+                <img src="{% static 'fab-icon.png' %}" alt="" class="fab-icon">
+            </div>
+        </div>
+    </body>
+</html>
