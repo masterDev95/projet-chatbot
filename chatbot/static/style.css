@@ -31,6 +31,10 @@ html,
 body {
     height: 100%;
     overflow: hidden;
+    background: url(capture.png);
+    background-repeat: round;
+    background-size: contain;
+    margin: 0;
 }
 
 .chatbot {
