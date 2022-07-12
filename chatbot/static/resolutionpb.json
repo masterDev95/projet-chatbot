@@ -14,7 +14,7 @@
     },
     {
       "name": "utilitaireResoPbCameraWindows10",
-      "response": "Go to Start>Settings>System>Sound."
+      "response": "Alors allez dans Démarrer > Paramètres > Système > Son."
     },
     {
       "name": "utilitaireResoPbCameraMac",
@@ -22,7 +22,7 @@
     },
     {
       "name": "activationSon",
-      "reponse":"Vous trouverez en bas à droite dans la barre des tâches"
+      "response":"Vous trouverez en bas à droite dans la barre des tâches"
     },
     {
       "name": "verificationSon",
@@ -34,7 +34,7 @@
     },
     {
       "name": "utilitaireResoPbSonWindows10",
-      "response": "Alors allez dans Démarrer>Paramètres>Système>Son. "
+      "response": "Go to Start > Settings > System > Sound."
     },
     {
       "name": "utilitaireResoPbSonMac",
@@ -42,7 +42,7 @@
     },
     {
       "name": "activationBulleDiscussion",
-      "reponse":"Vous devez voir avec votre professeur si il vous a donner les droit ou aller dans les paramètre du site en bas à droit pour l'ouverture et les droits de discussions"
+      "response":"Vous devez voir avec votre professeur si il vous a donner les droit ou aller dans les paramètre du site en bas à droit pour l'ouverture et les droits de discussions"
     },
     {
       "name": "verificationBulleDiscussion",
@@ -50,7 +50,7 @@
     },
     {
       "name": "activationMicro",
-      "reponse":"Si vous avez une plateforme avec votre micro veuillez vérifier que le logo muet n'est pas activé. Sinon appuyez sur celui-ci pour activer le micro."
+      "response": "Si vous avez une plateforme avec votre micro veuillez vérifier que le logo muet n'est pas activé. Sinon appuyez sur celui-ci pour activer le micro."
     },
     {
       "name": "verificationMicro",
@@ -74,15 +74,19 @@
     },
     {
       "name": "verificationConnexionCours",
-      "response": "Veuillez vérifier votre connexion internet."
+      "response": "Please check your internet connexion."
     },
     {
       "name": "verificationDoubleEcran",
       "response": "Veuillez vérifier votre branchement."
     },
     {
-      "name": "utilitaireResoPbEcranDiubleParamètre",
+      "name": "utilitaireResoPbEcranDoubleParamètre",
       "response": "Vous devez aller dans paramètre >Système>Ecran>Ecran Multiples."
+    },
+    {
+      "name": "pbMicro",
+      "response": "Alors allez dans : Système > résolution de problèmes > Autres utilitaires de résolution de problèmes > Micro pour tester votre micro"
     }
   ]
 }

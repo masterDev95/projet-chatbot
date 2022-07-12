@@ -11,7 +11,7 @@ nl.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer
 
 from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
+from keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 
 intents = json.loads(open('static/JeuDeDonne.json').read())

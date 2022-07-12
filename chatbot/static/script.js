@@ -52,6 +52,7 @@ submitBtn.addEventListener('click', (e) => {
                     chatbotFrame.innerHTML += `<div class="msg" id="bot">${responses.bot.text[1]}</div>`;
                     chatbotFrame.scrollTop = chatbotFrame.scrollHeight;
                     inputMsg.disabled = false;
+                    inputMsg.focus();
                 }, 5000);
             }
             if (responses.bot.extra === 'end') {
@@ -109,6 +110,7 @@ function chatbotMinimizeToggle() {
             chatbotFrame.appendChild(firstMessageContainer);
             footerElement.classList.remove('closed');
             chatbotFrame.style.height = 'calc(100% - var(--hauteur-footer) - var(--hauteur-header) - 8px)';
+            inputMsg.focus();
         }, 2000);
     }
     chatbotContainer.classList.toggle('closed');

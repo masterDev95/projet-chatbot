@@ -106,6 +106,7 @@ input[type="text"]:focus {
     background: #1e3799;
     color: white;
     font-weight: 300;
+    word-break: break-word;
 }
 
 .msg:first-child {

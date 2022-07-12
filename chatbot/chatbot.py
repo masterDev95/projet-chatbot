@@ -96,13 +96,13 @@ class Chatbot:
                         wait_string = 'wait'+str(self.pb_resolu_count)
                         self.wait = False
                         # Si la conversation est cloturé car pas de réponse (appel d'un assistant)
-                        if 'end' in i[wait_string].keys():
+                        if 'end' in i['waits'][self.last_question_tag][wait_string].keys():
                             self.end = True
                         # Si on est dans un cas ou on doit attendre le bot lancera un message avec une attente de 5 secs
-                        if 'wait' in i[wait_string].keys():
-                            return self.resolution_pb_wait(i[wait_string]['wait'], i[wait_string]['pb'])
+                        if 'wait' in i['waits'][self.last_question_tag][wait_string].keys():
+                            return self.resolution_pb_wait(i['waits'][self.last_question_tag][wait_string]['wait'], i['waits'][self.last_question_tag][wait_string]['pb'])
                         # Dans le cas ou il n'y a pas d'attente ou de cloture de conversation le bot répond aléatoire en rapport avec la derniere demande de l'utilisateur
-                        return [secrets.choice(i[wait_string]['responses'])]
+                        return [secrets.choice(i['waits'][self.last_question_tag][wait_string]['responses'])]
                     if 'end' in i[self.last_question_tag].keys():
                         self.end = True
                     # Attendre 5 secondes et demander si le pbm est résolu
@@ -114,13 +114,14 @@ class Chatbot:
                     return [secrets.choice(i[self.last_question_tag]['responses'])]
                 # Le bot attend 5 secondes puis renvoie un message
                 if 'wait' in i.keys():
-                    print('lol')
-                    return self.resolution_pb_wait(i['wait'], i['pb'])
+                    if i['wait'] == True:
+                        return self.resolution_pb_wait(i['wait'], i['pb'])
+                if 'multiWait' in i.keys():
+                    return self.resolution_pb_wait(1, i['pbs'][self.last_question_tag])
                 return [secrets.choice(i['responses'])]
 
     # Fonction résolution qui a pour parametre un problème précis (attente en cas de relance)
     def resolution_pb_wait(self, wait_inc, pb_name=None):
-        print('par la')
         response = []
 
         # Si le problème a pas de nom attendre sinon mettre la solution du problème
@@ -152,9 +153,6 @@ class Chatbot:
         else:
             ints = self.predict_class(msg)
             res = self.get_response(ints, self.intents)
-            
-        print(self.last_question_tag)
-        print(self.wait)
             
         i = 0
         for r in res:
